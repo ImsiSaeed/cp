@@ -1,7 +1,26 @@
 var app = angular.module('cp', [
 	'ngRoute',
 	'ngMaterial',
+	'ngMessages'
 ]);
+
+app.controller('AddKIController', function ($mdDialog) {
+	var ak = this;
+
+	ak.ki = {};
+
+	ak.save = function () {
+		console.log(ak.ki);
+	}
+
+	ak.reset = function () {
+		ak.ki = {};
+	}
+
+	ak.cancel = function () {
+		$mdDialog.hide();
+	}
+})
 
 app.controller('CPController', function ($scope, $rootScope, $mdSidenav, $location, $mdDialog) {
 	var cp = this;
@@ -12,6 +31,7 @@ app.controller('CPController', function ($scope, $rootScope, $mdSidenav, $locati
 		$mdDialog.show(
 			{
 				templateUrl: './src/dialogs/addki.html',
+				controller: 'AddKIController as ak',
 				clickOutsideToClose: true,
 				targetEvent: ev
 			}
@@ -22,6 +42,7 @@ app.controller('CPController', function ($scope, $rootScope, $mdSidenav, $locati
 		$mdDialog.show(
 			{
 				templateUrl: './src/dialogs/addki.html',
+				controller: 'AddKIController as ak',
 				clickOutsideToClose: true,
 				targetEvent: ev
 			}
@@ -32,6 +53,7 @@ app.controller('CPController', function ($scope, $rootScope, $mdSidenav, $locati
 		$mdDialog.show(
 			{
 				templateUrl: './src/dialogs/addki.html',
+				controller: 'AddKIController as ak',
 				clickOutsideToClose: true,
 				targetEvent: ev
 			}
