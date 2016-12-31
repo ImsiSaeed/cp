@@ -30,21 +30,21 @@
 				</md-toolbar>
 				<md-list layout-padding>
 					<md-list-item class="no-padding">
-						<md-button ng-href="#!/hlr" class="md-primary initial-align" flex>
+						<md-button ng-click="cp.goTo('hlr')" class="md-primary initial-align" flex>
 							<span>HLR</span>
 						</md-button>
 						<md-divider></md-divider>
 					</md-list-item>
 
 					<md-list-item class="no-padding">
-						<md-button ng-href="#!/sps" class="md-primary initial-align" flex>
+						<md-button ng-click="cp.goTo('sps')" class="md-primary initial-align" flex>
 							<span>SPS</span>
 						</md-button>
 						<md-divider></md-divider>
 					</md-list-item>
 
 					<md-list-item class="no-padding">
-						<md-button ng-href="#!/msc" class="md-primary initial-align" flex>
+						<md-button ng-click="cp.goTo('msc')" class="md-primary initial-align" flex>
 							<span>MSC</span>
 						</md-button>
 						<md-divider></md-divider>
@@ -73,52 +73,7 @@
 				</h3>
 			</div>
 		</md-toolbar>
-
-
-		<md-tabs md-dynamic-height md-border-bottom>
-		      <md-tab ng-cloak label="HLR">
-		        <md-content class="md-padding">
-
-        </md-content>
-      	</md-tab>
-      
-      <md-tab label="SPS">
-        <md-content ng-cloak class="md-padding">
-			<md-content class="md-padding" layout="row" layout-wrap flex>
-				<div flex="50" flex-gt-sm="50" layout="column">
-					<md-card>
-						<md-card-title>
-							<md-card-title-text>
-								<span class="md-subhead">SUB MANAGEMENT</span>
-							</md-card-title-text>
-						</md-card-title>
-						<md-card-content>
-
-						</md-card-content>
-					</md-card>
-				</div>
-        </md-content>
-      </md-tab>
-
-         <md-tab label="MSC">
-        <md-content ng-cloak class="md-padding">
-          <md-content class="md-padding" layout="row" layout-wrap flex>
-			<div flex="50" flex-gt-sm="50" layout="column">
-				<md-card>
-					<md-card-title>
-						<md-card-title-text>
-							<span class="md-subhead">SUB MANAGEMENT</span>
-						</md-card-title-text>
-					</md-card-title>
-					<md-card-content>
-
-					</md-card-content>
-				</md-card>
-			</div>
-        </md-content>
-      </md-tab>
-    </md-tabs>
-
+		
 		<div ng-view layout-padding></div>
 	</md-content>
 

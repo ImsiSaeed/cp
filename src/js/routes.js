@@ -7,14 +7,13 @@ angular.module('cp').config([
 			})
 			.when('/hlr', {
 				templateUrl: './src/pages/hlr.html',
-				// controller: 'MedicinesController as meds'
 			})
-			.when('/sps',{
-				templateUrl: './src.pages/sps.html'
-			})
-			.when('/msc',{
-				templateUrl: './src.pages/msc.html'
-			})
+			// .when('/sps',{
+			// 	templateUrl: './src.pages/sps.html'
+			// })
+			// .when('/msc',{
+			// 	templateUrl: './src.pages/msc.html'
+			// })
 			.when('/404', {
 				templateUrl: './src/pages/404.html',
 			})
